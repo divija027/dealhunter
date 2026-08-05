@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "noice-deal-monitor",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "vars": {
+    "SWIGGY_MCP_URL": "https://mcp.swiggy.com/im",
+    "SWIGGY_OAUTH_BASE_URL": "https://mcp.swiggy.com",
+    "DEAL_MAX_PRICE": "25",
+    "DEAL_MIN_DISCOUNT_PCT": "70",
+    "ADMIN_USERNAME": "admin",
+    "NTFY_BASE_URL": "https://ntfy.sh",
+    "PUBLIC_BASE_URL": "https://REPLACE_WITH_WORKER_URL"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dealhunter-noice",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

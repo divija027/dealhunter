@@ -1,0 +1,5 @@
+ADMIN_PASSWORD=replace-with-a-long-random-password
+TOKEN_ENCRYPTION_KEY=replace-with-base64-encoded-32-byte-key
+NTFY_TOPIC=replace-with-a-long-random-topic
+# Optional for a protected/self-hosted ntfy topic:
+# NTFY_ACCESS_TOKEN=tk_replace_me
